@@ -2,14 +2,15 @@ name: arXiv Daily Digest
 
 on:
   schedule:
-    # 毎日UTC 13:00（日本時間 22:00）に実行
     - cron: "0 13 * * *"
-  workflow_dispatch:  # 手動実行も可能
+  workflow_dispatch:
 
 jobs:
   send-digest:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
       - name: Checkout repository
