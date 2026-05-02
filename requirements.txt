@@ -1,0 +1,4 @@
+# No external dependencies needed!
+# The script uses only Python standard library.
+# If you want better Japanese translation without LLM, add:
+# deep-translator==1.11.4
